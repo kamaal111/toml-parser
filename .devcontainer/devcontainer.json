@@ -1,0 +1,29 @@
+{
+	"name": "${localWorkspaceFolderBasename}",
+	"dockerComposeFile": [
+		"docker-compose.code.yml"
+	],
+	"service": "code",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"postCreateCommand": "just post-dev-container-create",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"zig.path": "/usr/bin/zig",
+				"zig.zls.path": "/workspaces/${localWorkspaceFolderBasename}/.devcontainer/zls/zig-out/bin/zls"
+			},
+			"extensions": [
+				"skellock.just",
+				"streetsidesoftware.code-spell-checker",
+				"redhat.vscode-yaml",
+				"ms-azuretools.vscode-docker",
+				"eamodio.gitlens",
+				"aaron-bond.better-comments",
+				"tamasfe.even-better-toml",
+				"ziglang.vscode-zig"
+			]
+		}
+	},
+	"features": {}
+}
