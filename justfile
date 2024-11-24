@@ -2,6 +2,21 @@
 default:
     just --list --unsorted
 
+# Build and run project
+build-run: build run
+
+# Run tests
+test:
+    zig build test
+
+# Build project
+build:
+    zig build --summary all
+
+# Run project
+run:
+    ./zig-out/bin/toml-parser
+
 # Install modules
 install-modules:
     #!/bin/zsh
