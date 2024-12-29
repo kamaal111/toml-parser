@@ -1,0 +1,6 @@
+[tool.poetry]
+name = "toml-parser"
+version = "0.1.0"
+# Just a comment
+description = ""
+readme = "README.md"
